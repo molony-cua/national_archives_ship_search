@@ -6,3 +6,5 @@ Most Javascript code can be found in www/js/ship-utils.js (this is for futurepro
 Some Javascript in the <script> tags at the bottom of the HTML.
 
 Ships information can be found in www/xml/ships.html
+
+Connection to National Archives is broken as my API key has expired
