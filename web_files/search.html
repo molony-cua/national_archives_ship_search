@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Load JQuery-->
+		<script
+		src="http://code.jquery.com/jquery-3.3.1.js"	
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+		crossorigin="anonymous"></script>
+		
+		<!--Load JQuery UI-->
+		<script
+		src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"
+		integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" 
+		crossorigin="anonymous"></script>
+		
+		<!--Load JQuery UI Stylesheet-->
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css">
+		
+		<!--Load Stylesheet-->
+		<link rel="stylesheet" href="css/style.css">
+		
+		<!--Load Utilities File-->
+		<script src="js/ship-utils.js"></script>
+	</head>
+	<body>
+		<header>
+			<div id="headLeft"><image id="logo" width="100%" src="logo.png" href="index.html"></div>
+				<div id="headRight">
+					<h1>JQuery Ship Viewer</h1>
+					<h2>Baltimore Museum of Industry Ship Plans Collection</h2>
+				</div>
+			</header>
+			
+			<div id="container">
+				<div id="left">
+					<div id="navBar">
+						<ul>
+							<li class="navigationMenu"><a href="index.html">Home</a></li>
+							<li class="navigationMenu"><a href="search.html">Ship Search</a></li>
+							<li class="navigationMenu"><a href="ships.html">List of Ships</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="right" id="content">
+					<label for="shipSearch">Ship Name: </label>
+					<input id="shipSearch"><button id="search">Searcb</button>
+					
+					<!-- Shows ship information -->
+					<div id="xmlHolder" hidden>
+						<h1 id="designation"></h1>
+						<h2 id="shipType"></h2>
+						<h3 id="shipYard"></h3>
+						<ul id="shipDetails">
+							<li id="length"></li>
+							<li id="beam"></li>
+							<li id="draft"></li>
+							<li id="complement"></li>
+						</ul>
+						<p id="planLoc"></p>
+					</div>
+					
+					<p id="errorMessage"></p>
+					
+					<div id="imageDisplay" title="National Archives Images" width="700px">
+						<div id="imageViewer">
+							<!--Displays the selected image-->
+							<img id="display" class="viewer" src="">
+						</div>
+						
+						<!--Stores the thumbnails-->
+						<div id="thumbDisplay" width="960px">
+							<table class="thumbTable">
+								<tr class="thumbTable" id="thumbs">
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div id="progress" hidden>
+					<table>
+						<tr>
+						<td id="loading">Loading Images from the National Archives Catalog:</td>	
+						<td width=200px;><div id="progressBar"></div></td>	
+						</tr>
+					</table>
+						<div id="progressBar"></div>
+					</div>
+					<button id="showImages" hidden>Show Images</button>
+				</div>
+			</div>
+		</div>
+		<script>			
+			var ships = ["USS Enterprise","USS Ohio","Freighter 123","S.S. Good Times","USS Harpers Ferry","USS Texas"];
+			var shipID = "";
+			
+			// Creates Autocomplete object from JQuery UI
+			$("#shipSearch" ).autocomplete({
+				source: ships
+			});
+			
+			// Creates Progressbar object from JQuery UI
+			$( "#progressBar" ).progressbar({
+				value: false
+			});
+			
+			// Creates Dialog Box object from JQuery UI
+			$("#imageDisplay").dialog({ 
+				autoOpen: false,
+			width: 500});
+			
+			// Runs the search function and changes the hash
+			$("#search").click(function() {
+				search();
+			});
+			
+			// Makes button show 
+			$("#showImages").click(function() {
+				$("#imageDisplay").dialog("open");
+			});
+			
+			// Loads ship information on page load
+			loadHash();
+			
+			// Handles the change of hash on search to change ship information
+			$(window).on( 'hashchange', function(e) {
+				loadHash();
+			} );
+		</script>
+	</body>
+</html>

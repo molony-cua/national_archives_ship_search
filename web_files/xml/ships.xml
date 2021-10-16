@@ -1,0 +1,109 @@
+<!--Navy ship info comes from Wikipedia-->
+<ships>
+	<ship id="100000">
+		<planLocation>WH03-02-03</planLocation>
+		<details>
+			<shipName>USS Enterprise</shipName>
+			<designation>CVN-65</designation>
+			<shipyard>Newport News Shipbuilding and Drydock Company</shipyard>
+			<yearComplete>1961</yearComplete>
+			<yearRetired>2012 </yearRetired>
+			<shipType>Aircraft Carrier</shipType>
+			<stats>
+				<length>1,123 ft.</length>
+				<beam>132.8 ft Waterline, 257.2 ft Extreme</beam>
+				<draft>39 ft</draft>
+				<complement>5,828</complement>
+			</stats>
+			<isNavy>Yes</isNavy>
+		</details>
+	</ship>
+	<ship id="100001">
+		<planLocation>WH01-02-04</planLocation>
+		<details>
+			<shipName>USS Ohio</shipName>
+			<designation>SSGN-726</designation>
+			<shipyard>General Dynamics Electric Boat</shipyard>
+			<yearComplete>1979</yearComplete>
+			<yearRetired>Active</yearRetired>
+			<shipType>Submarine</shipType>
+			<stats>
+				<length>1,123 ft.</length>
+				<beam>42 ft</beam>
+				<draft>N/A</draft>
+				<complement>15 officers, 140 enlisted</complement>
+			</stats>
+			<isNavy>Yes</isNavy>
+		</details>
+	</ship>
+	<ship id="100002">
+		<planLocation>WH01-02-03</planLocation>
+		<details>
+			<shipName>Freighter 123</shipName>
+			<shipyard>Bethlehem Steel</shipyard>
+			<yearComplete>1956</yearComplete>
+			<yearRetired>Active</yearRetired>
+			<shipType>Cargo Vessel</shipType>
+			<stats>
+				<length>1,123 ft.</length>
+				<beam>132.8 ft Waterline</beam>
+				<draft>N/A</draft>
+				<complement>10 Crewmen</complement>
+			</stats>
+			<isNavy>No</isNavy>
+		</details>
+	</ship>	
+	<ship id="100003">
+		<planLocation>MC02-01-04</planLocation>
+		<details>
+			<shipName>S.S. Good Times</shipName>
+			<shipyard>Bethlehem Steel</shipyard>
+			<yearComplete>2018</yearComplete>
+			<yearRetired>Active</yearRetired>
+			<shipType>Pleasure Vessel</shipType>
+			<stats>
+				<length>300 ft</length>
+				<beam>40 ft</beam>
+				<draft>10 ft.</draft>
+				<complement>10 Crew</complement>
+			</stats>
+			<isNavy>No</isNavy>
+		</details>
+	</ship>	
+	<ship id="100004">
+		<planLocation>MC02-02-03</planLocation>
+		<details>
+			<shipName>USS Harpers Ferry</shipName>
+			<designation>LSD-49</designation>
+			<shipyard>Avondale Shipyards</shipyard>
+			<yearComplete>1993</yearComplete>
+			<yearRetired>Active</yearRetired>
+			<shipType>Dock Landing Ship</shipType>
+			<stats>
+				<length>610 ft</length>
+				<beam>84 ft</beam>
+				<draft>21 ft</draft>
+				<complement>22 officers, 397 enlisted men</complement>
+			</stats>
+			<isNavy>Yes</isNavy>
+		</details>
+	</ship>
+	<ship id="100005">
+		<planLocation>WH01-02-03</planLocation>
+		<details>
+			<shipName>USS Texas</shipName>
+			<designation>BB-35</designation>
+			<shipyard>Newport News Shipbuilding</shipyard>
+			<yearComplete>1912</yearComplete>
+			<yearRetired>1948</yearRetired>
+			<shipType>Battleship</shipType>
+			<stats>
+				<length>573 ft.</length>
+				<beam>95 ft</beam>
+				<draft>28.5 ft.</draft>
+				<complement>10 Crewmen</complement>
+			</stats>
+			<isNavy>Yes</isNavy>
+		</details>
+	</ship>	
+</ships>

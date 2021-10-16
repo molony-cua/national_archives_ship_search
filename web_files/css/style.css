@@ -1,0 +1,103 @@
+table.thumbTable {
+	table-layout:fixed;
+	width:960px;
+	border-collapse: collapse;
+}
+table.thumbTable, tr.thumbTable, td.thumbHolder {
+	text-align: center;
+	vertical-align: center;
+}
+#imageViewer {
+	width: 100%;
+	min-height: 400px;
+	text-align: center;
+	vertical-align: center;
+}
+td.thumbTable {
+	width:120px;
+}
+img.thumb:hover {
+	border: 2px yellow solid;
+}
+img.chosen {
+	border: 2px red solid;
+}
+img {
+	border: 2px black solid;
+}
+img.thumb {
+	height: 70px;
+	width: 100px;
+}
+img.viewer {
+	padding-top:5%;
+	width: 90%;
+	height: auto;
+	border-style: none;
+}
+#thumbDisplay {
+	overflow-x: scroll;
+	width: 100%;
+}
+#logo {
+	border: none;
+	width: 100%;
+	height: auto;
+	padding: 0px;
+	margin: 0px;
+}
+header {
+	display: flex;
+	background-color: #485167;
+	padding: 0px;
+	margin: 0px;
+	border-bottom: 2px solid black;
+}
+#navBar {
+	width: 230px;
+	background-color: #D1B894;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+	padding: 10px;
+	height: 150px;
+}
+#container {
+	display: flex;
+	height:800px;
+	background-color: #BCBCBE;
+}
+div.right {
+	flex-grow: 1;
+}
+body {
+	margin:0;
+}
+#headLeft {
+	border: none;
+	background-color: #EAE6DA;
+	width: 250px;
+	padding: 0px;
+	margin: 0px;
+		border-right: 2px solid black;
+}
+#headRight > h1, #headRight > h2 {
+	color: #EAE6DA;
+	flex-grow: 1;
+	padding-left: 25px;
+}
+#headRight > h2 {
+	font-size: 18px;
+	font-style: italic;
+}
+#content {
+	padding: 25px;
+}
+.navigationMenu {
+	list-style-type: none;
+}
+ul#shipDetails {
+	list-style-type: none;
+}
+#loading {
+	font-weight: bold;
+}
